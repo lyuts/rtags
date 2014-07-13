@@ -12,7 +12,7 @@ install:
 before_script:
     - mkdir build
     - cd build
-    - if [ "$CXX" == "clang++" ]; then export CXXFLAGS="-stdlib=libc++"; fi
+    - if [ "$CXX" == "clang++" ]; then export CXXFLAGS="stdlib=libc++"; fi
     - cmake -DCMAKE_CXX_COMPILER=clang++  ..
 
 script: make
