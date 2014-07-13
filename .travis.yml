@@ -1,6 +1,6 @@
 language: cpp
 
-compiler: gcc
+compiler: gcc-4.8
 
 before_install:
     - git submodule update --init --recursive
