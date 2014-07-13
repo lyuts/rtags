@@ -3,7 +3,11 @@ language: cpp
 compiler: clang
 
 before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq libclang1
     - git submodule update --init --recursive
+
+
 
 before_script: mkdir build && cd build && cmake ..
 
