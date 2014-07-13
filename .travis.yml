@@ -1,6 +1,6 @@
 language: cpp
 
-compiler: clang
+compiler: clang-3.4
 
 before_install:
     - git submodule update --init --recursive
@@ -12,8 +12,7 @@ install:
 before_script:
     - mkdir build
     - cd build
-    - if [ "$CXX" == "clang++" ]; then export CXXFLAGS="-stdlib=libc++"; fi
-    - cmake -DCMAKE_CXX_COMPILER=clang++  -DCMAKE_CXX_FLAGS="-stdlib=libc++" ..
+    - cmake ..
 
 script: make
 
