@@ -1,0 +1,14 @@
+language: cpp
+
+compiler: clang
+
+before_install:
+    - git submodule update --init --recursive
+
+before_script: mkdir build && cd build && cmake ..
+
+script: make
+
+os:
+    - linux
+    - osx
