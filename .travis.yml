@@ -1,6 +1,6 @@
 language: cpp
 
-compiler: clang-3.4
+compiler: gcc
 
 before_install:
     - git submodule update --init --recursive
